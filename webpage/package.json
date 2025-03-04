@@ -1,0 +1,13 @@
+{
+  "name": "go-llm-chat-webpage",
+  "version": "1.0.0",
+  "description": "Webpage for GoLLMChat project",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building the project...'"
+  },
+  "author": "Niladri Das",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
