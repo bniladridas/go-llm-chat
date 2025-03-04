@@ -5,29 +5,26 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Go
-      uses: actions/setup-go@v2
+      uses: actions/setup-go@v4
       with:
-        go-version: '^1.16'
+        go-version: '^1.16.0'
 
     - name: Cache Go modules
-      id: cache-modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: |
+          ~/go/pkg/mod
           ~/.cache/go-build
-          /go/pkg/mod
         key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
         restore-keys: |
           ${{ runner.os }}-go-
 
-    - name: Download Go modules
-      if: steps.cache-modules.outputs.cache-hit != 'true'
-      run: go mod download
+    - name: Install dependencies
+      run: go mod tidy
 
     - name: Build
       run: go build -v ./...
