@@ -23,12 +23,7 @@ jobs:
     - name: Test
       run: go test -v ./...
 
-    - name: Debug orphan processes
+    - name: Clean up Git settings
       run: |
-        ps aux
-        pstree
-
-    - name: Debug Git configuration
-      run: |
-        git config --list
-        git submodule foreach --recursive git config --list
+        git config --global --unset-all http.https://github.com/.extraheader
+        git submodule foreach --recursive git config --unset-all http.https://github.com/.extraheader
