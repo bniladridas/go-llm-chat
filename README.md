@@ -86,3 +86,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Code of Conduct
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) for details on our community standards.
+
+## Webpage
+Check out our [project webpage](https://bniladridas.github.io/go-llm-chat/) for more information and updates.
