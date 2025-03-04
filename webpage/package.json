@@ -4,7 +4,7 @@
   "description": "Webpage for GoLLMChat project",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Building the project...'"
+    "build": "mkdir -p public && cp index.html public/index.html"
   },
   "author": "Niladri Das",
   "license": "MIT",
