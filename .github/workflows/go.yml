@@ -25,8 +25,3 @@ jobs:
 
     - name: Test
       run: go test -v ./...
-
-    - name: Clean up Git settings
-      run: |
-        git config --global --unset-all http.https://github.com/.extraheader || true
-        git submodule foreach --recursive git config --unset-all http.https://github.com/.extraheader || true
