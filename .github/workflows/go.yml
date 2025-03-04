@@ -25,5 +25,5 @@ jobs:
 
     - name: Clean up Git settings
       run: |
-        git config --global --unset-all http.https://github.com/.extraheader
-        git submodule foreach --recursive git config --unset-all http.https://github.com/.extraheader
+        git config --global --unset-all http.https://github.com/.extraheader || true
+        git submodule foreach --recursive git config --unset-all http.https://github.com/.extraheader || true
