@@ -27,3 +27,8 @@ jobs:
       run: |
         ps aux
         pstree
+
+    - name: Debug Git configuration
+      run: |
+        git config --list
+        git submodule foreach --recursive git config --list
